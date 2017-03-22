@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_update10" model="ir.ui.view">
+            <field name="name">update10.view</field>
+            <field name="model">update10</field>
+            <field name="arch" type="xml">
+                <form string="Configure update" class="oe_form_configuration">
+                    <header>
+                    </header>
+                    <group>
+                     <group string="Old Server">
+                        <field name="server_old" placeholder="100.100.100.100"/>
+                        <field name="port_old" placeholder="8069"/>
+                        <field name="user_old"/>
+                        <field name="pass_old" password="True"/>
+                     </group>
+
+                     <group string="New Server">
+                        <field name="server_new" placeholder="200.200.200.200"/>
+                        <field name="port_new" placeholder="8069"/>
+                        <field name="user_new"/>
+                        <field name="pass_new" password="True"/>
+                     </group>
+
+                    </group>
+
+                    <group string="Options to Import">
+                       <field name="val_materials"/>
+                    </group>
+
+                    <footer>
+                       <button string="Update" type="object" name="update_server" class="oe_highlight" icon='fa-cloud-upload'/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_update10" model="ir.actions.act_window">
+            <field name="name">Update10</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">update10</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem
+            id="l10n_cl_settings_menu"
+            name="Chilean Localization Settings"
+            parent="base.menu_administration"
+            sequence="30"
+            groups="base.group_system"/>
+
+        <menuitem id="menu_update10"
+                  name="Update Config"
+                  parent="l10n_cl_settings_menu"
+                  sequence="10"
+                  action="action_update10"
+                />
+    </data>
+</openerp>
