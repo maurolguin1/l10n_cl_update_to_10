@@ -20,26 +20,25 @@
 #
 ##############################################################################
 {
-    'name': 'Update to 10 MFH',
-    'version': '10.0.0.1.0',
-    'author': "Falcón Solutions, Marlon Falcón",
-    'maintainer': 'Falcon Solutions',
-    'website': 'http://www.falconsolutions.cl',
-    'license': 'AGPL-3',
-    'category': 'Settings',
-    'summary': 'Actualizacion de 10 de versiones 8 y 9',
-    'depends': ['base'],
-    'description': """
+    "name": "Update to 10 MFH",
+    "version": "10.0",
+    "author": "Falcón Solutions, Marlon Falcón",
+    "maintainer": "Falcon Solutions",
+    "website": "http://www.falconsolutions.cl",
+    "license": "AGPL-3",
+    "category": "Settings",
+    "summary": "Actualizacion de 10 de versiones 8 y 9",
+    "depends": ["base"],
+    "description": """
 Reportes Personalizados Localización Chilena MFH
 =====================================================
 * Permite importar materiales de la 9
         """,
-    'data': [
-        'views/update_10_view.xml',
+    "data": [
+        "views/update_10_view.xml",
     ],
-    'installable': True,
-    'auto_install': False,
-    'demo': [],
-    'test': [],
+    "installable": True,
+    "auto_install": False,
+    "demo": [],
+    "test": [],
 }
-
